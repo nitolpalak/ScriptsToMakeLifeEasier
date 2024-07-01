@@ -1,14 +1,15 @@
-================== Links2CSRF ==================
+# =========== Links2CSRF ===========
+
 A script to convet api routes into CSRF include able format.
 
-Assumption:
+**Assumption:**
 - The route will be in first column
 - There is no header in the csv file
 - Expected format of the output is '"/api/.....",'
 - No '//' is expected in the output
 - Need to keep the data until '?', '(', ' ' or '{' is found
 
-Process:
+**Process:**
 - Takes input of a CSV file
 - Perform following operations to the First data of each row:
   - Lower case the string
@@ -20,7 +21,7 @@ Process:
   - Adds double quotation and comma separates them 
 - Generates a text file containing the unique data
 
-Example:
+**Example:**
 Converts a data like one of the following formats into '"/api/.....",'
 - 'api//...?....'
 - 'api/.../{param}/ (some description)'
